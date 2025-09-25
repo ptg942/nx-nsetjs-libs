@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@org/coin-market-cap": ["libs/coin-market-cap/src/index.ts"],
+      "@org/data-access": ["libs/data-access/src/index.ts"],
       "@org/my-shared-lib": ["libs/my-shared-lib/src/index.ts"]
     }
   },

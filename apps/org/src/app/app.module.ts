@@ -4,9 +4,16 @@ import { AppService } from './app.service';
 import { BooksModule } from './books/books.module';
 import { CryptoService } from './crypto/crypto.service';
 import { CryptoModule } from './crypto/crypto.module';
+import { MongooseModule } from '@nestjs/mongoose';
+import { CatsModule } from './cats/cats.module';
 
 @Module({
-  imports: [BooksModule, CryptoModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost/gcp'),
+    BooksModule,
+    CryptoModule,
+    CatsModule,
+  ],
   controllers: [AppController],
   providers: [AppService, CryptoService],
 })
