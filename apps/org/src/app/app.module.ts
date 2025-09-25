@@ -6,6 +6,7 @@ import { CryptoService } from './crypto/crypto.service';
 import { CryptoModule } from './crypto/crypto.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CatsModule } from './cats/cats.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { CatsModule } from './cats/cats.module';
     BooksModule,
     CryptoModule,
     CatsModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService, CryptoService],

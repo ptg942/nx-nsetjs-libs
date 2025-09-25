@@ -1,5 +1,6 @@
-import {Body, Controller, Get, Param, Post} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, UseGuards} from '@nestjs/common';
 import {CatsService} from "./cats.service";
+import { AuthGuard } from '@nestjs/passport';
 
 class CreateCatDto {
   name: string;
@@ -8,6 +9,7 @@ class CreateCatDto {
 }
 
 @Controller('cats')
+@UseGuards(AuthGuard('jwt'))
 export class CatsController {
   constructor(private readonly catsService: CatsService) {}
 
