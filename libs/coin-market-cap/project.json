@@ -1,0 +1,19 @@
+{
+  "name": "coin-market-cap",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/coin-market-cap/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/coin-market-cap",
+        "main": "libs/coin-market-cap/src/index.ts",
+        "tsConfig": "libs/coin-market-cap/tsconfig.lib.json",
+        "assets": ["libs/coin-market-cap/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
